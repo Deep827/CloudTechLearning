@@ -37,30 +37,30 @@ It will prompt you to enter your AWS Access Key ID, Secret Access Key, default r
 
 After following above steps below errors occured and finally created:
 
-C:\Users\kanna>aws configure
-AWS Access Key ID [****************eate]: terra-create
-AWS Secret Access Key [****************2024]: @Target2024
+C:\Users\deep827>aws configure
+AWS Access Key ID [****************eate]: terra-sreate
+AWS Secret Access Key [****************2024]: @Targe2024
 Default region name [us-east-1]: US East (N. Virginia)
 Default output format [None]: JSON
 
-C:\Users\kanna>aws iam get-user
+C:\Users\deep827>aws iam get-user
 
 Provided region_name 'US East (N. Virginia)' doesn't match a supported format.
 
-C:\Users\kanna>aws configure
-AWS Access Key ID [****************eate]: terra-create
-AWS Secret Access Key [****************2024]: @Target2024
+C:\Users\deep827>aws configure
+AWS Access Key ID [****************eate]: terra-sreate
+AWS Secret Access Key [****************2024]: @Targe2024
 Default region name [US East (N. Virginia)]: us-east-1
 Default output format [JSON]: JSON
 
-C:\Users\kanna>aws iam get-user
+C:\Users\deep827>aws iam get-user
 
 An error occurred (InvalidClientTokenId) when calling the GetUser operation: The security token included in the request is invalid.
 
 --->for the above I created the accesskeys and secret key under the terra-create user.
 
 
-C:\Users\kanna>aws configure list
+C:\Users\deep827>aws configure list
       Name                    Value             Type    Location
       ----                    -----             ----    --------
    profile                <not set>             None    None
@@ -68,38 +68,38 @@ access_key     ****************eate shared-credentials-file
 secret_key     ****************2024 shared-credentials-file
     region                us-east-1      config-file    ~/.aws/config
 
-C:\Users\kanna>aws configure
-AWS Access Key ID [****************eate]: AKIA47CRWWMOXQZY4OC3
-AWS Secret Access Key [****************2024]: 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
+C:\Users\deep827>aws configure
+AWS Access Key ID [****************eate]: AKIA47CRWWMXQZY4OC3
+AWS Secret Access Key [****************2024]: rjokn+8aVX0JCa/ULZvEgF6HMyU/Ff6pANzqGNd
 Default region name [us-east-1]: Global
 Default output format [JSON]: JSON
 
-C:\Users\kanna>aws iam get-user
+C:\Users\deep827>aws iam get-user
 
 An error occurred (AccessDenied) when calling the GetUser operation: User: arn:aws:iam::891377070877:user/terra-create is not authorized to perform: iam:GetUser on resource: user terra-create because no identity-based policy allows the iam:GetUser action
 
 ---> for this I added additional permissions to get IAMFullaccess policy to this user using add permissions option. That resovled the issue
 
-C:\Users\kanna>aws iam get-user
+C:\Users\deep827>aws iam get-user
 
 Unknown output type: JSON
 
-C:\Users\kanna>aws configure
-AWS Access Key ID [****************4OC3]: AKIA47CRWWMOXQZY4OC3
-AWS Secret Access Key [****************qGNd]: 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
+C:\Users\deep827>aws configure
+AWS Access Key ID [****************4OC3]: AKIA47CRWWMXQZY4OC3
+AWS Secret Access Key [****************qGNd]: rjokn+8aVX0JCa/ULZvEgF6HMyU/Ff6pANzqGNd
 Default region name [Global]: us-east-1
 Default output format [JSON]: yaml
 
-C:\Users\kanna>aws iam get-user
+C:\Users\deep827>aws iam get-user
 User:
-  Arn: arn:aws:iam::891377070877:user/terra-create
+  Arn: arn:aws:iam::891377070877:user/terra-sreate
   CreateDate: '2024-06-12T14:33:32+00:00'
   Path: /
   Tags:
-  - Key: AKIA47CRWWMOXQZY4OC3
+  - Key: AKIA47CRWWXQZY4OC3
     Value: aws cli
-  UserId: AIDA47CRWWMO4OXOPOCIO
+  UserId: AIDA47CRWWM4OXOPOCIO
   UserName: terra-create
 
 
-C:\Users\kanna>
+C:\Users\deep827>
