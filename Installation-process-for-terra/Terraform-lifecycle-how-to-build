@@ -1,0 +1,25 @@
+### Initialize infrastructure ###
+
+terraform init	                :Initialize a working directory
+terraform init -input=true	    :Ask for input if necessary
+terraform init -lock=false	    :Disable locking of state files during state-related operations
+
+terraform plan	                :Creates an execution plan (dry run)
+terraform apply	                :Executes changes to the actual environment
+terraform apply –auto-approve	:Apply changes without being prompted to enter ”yes”
+terraform destroy –auto-approve :Destroy/cleanup without being prompted to enter ”yes”
+
+Terraform Workspaces
+terraform workspace             :new	Create a new workspace and select it
+terraform workspace select	    :Select an existing workspace
+terraform workspace list	    :List the existing workspaces
+terraform workspace show	    :Show the name of the current workspace
+terraform workspace delete	    :Delete an empty workspace
+
+### More in usage:
+
+terraform init
+terraform plan                  ->creates state file->.tfstate but doesnt modify the state file until apply lifecycle performed.
+terraform apply                 ->peform changes to .tfstate file and capture the local changes to remote aws console.
+terraform apply –auto-approve   -> doesnt ask for "enter yes to proceed"
+
